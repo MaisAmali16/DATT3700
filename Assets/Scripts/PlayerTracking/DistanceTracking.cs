@@ -2,35 +2,32 @@ using UnityEngine;
 
 public class DistanceTracker : MonoBehaviour
 {
-    public Transform playerCamera;
+    public Transform cameraTransform; // drag XR Origin Main Camera here
+
+    [Header("Distance Stats")]
     public float totalDistance = 0f;
     public int sampleCount = 0;
     public float averageDistance = 0f;
 
-    private bool isTracking = false;
+    void OnEnable()
+    {
+        // reset stats when the zone activates this tracker
+        totalDistance = 0f;
+        sampleCount = 0;
+        averageDistance = 0f;
+
+        if (cameraTransform == null && Camera.main != null)
+            cameraTransform = Camera.main.transform;
+    }
 
     void Update()
     {
-        if (playerCamera == null)
-            playerCamera = Camera.main.transform;
+        if (cameraTransform == null) return;
 
-        Ray ray = new Ray(playerCamera.position, playerCamera.forward);
-        RaycastHit hit;
+        float distance = Vector3.Distance(cameraTransform.position, transform.position);
 
-        // Only track distance when player is looking at object
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
-        {
-            float distance = Vector3.Distance(playerCamera.position, transform.position);
-
-            totalDistance += distance;
-            sampleCount++;
-
-            averageDistance = totalDistance / sampleCount;
-            isTracking = true;
-        }
-        else
-        {
-            isTracking = false;
-        }
+        totalDistance += distance;
+        sampleCount++;
+        averageDistance = totalDistance / sampleCount;
     }
 }
