@@ -527,7 +527,7 @@ Transform:
   m_GameObject: {fileID: 93413873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.15, z: 0}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9105,7 +9105,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1927182006}
   m_CameraFloorOffsetObject: {fileID: 93413873}
   m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 3
+  m_CameraYOffset: 1.6
 --- !u!4 &1927182009
 Transform:
   m_ObjectHideFlags: 0
@@ -10109,72 +10109,6 @@ MonoBehaviour:
   - {fileID: 1352319214}
   - {fileID: 1352319213}
   activeDuration: 10
---- !u!1 &2090511483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2090511490}
-  - component: {fileID: 2090511489}
-  - component: {fileID: 2090511488}
-  - component: {fileID: 2090511487}
-  - component: {fileID: 2090511486}
-  - component: {fileID: 2090511485}
-  - component: {fileID: 2090511484}
-  m_Layer: 0
-  m_Name: Cube2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2090511484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090511483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf0217458ecb704a9c8267566a16fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TurnTracking
-  cameraTransform: {fileID: 1919091304}
-  gazeCount: 0
---- !u!114 &2090511485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090511483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3910f96ec62e8e1498c56ce13c95289e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GazeTracker
-  stareTime: 0
-  cameraTransform: {fileID: 1919091304}
---- !u!114 &2090511486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090511483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75d41e84f72f3c04e8f317d50c10698e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DistanceTracker
-  cameraTransform: {fileID: 0}
-  totalDistance: 0
-  sampleCount: 0
-  averageDistance: 0
 --- !u!1001 &2077235590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10303,6 +10237,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c, type: 3}
   m_PrefabInstance: {fileID: 2078411412}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2090511483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090511490}
+  - component: {fileID: 2090511489}
+  - component: {fileID: 2090511488}
+  - component: {fileID: 2090511487}
+  - component: {fileID: 2090511486}
+  - component: {fileID: 2090511485}
+  - component: {fileID: 2090511484}
+  m_Layer: 0
+  m_Name: Cube2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2090511484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090511483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf0217458ecb704a9c8267566a16fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurnTracking
+  cameraTransform: {fileID: 1919091304}
+  gazeCount: 0
+--- !u!114 &2090511485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090511483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3910f96ec62e8e1498c56ce13c95289e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GazeTracker
+  stareTime: 0
+  cameraTransform: {fileID: 1919091304}
+--- !u!114 &2090511486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090511483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d41e84f72f3c04e8f317d50c10698e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DistanceTracker
+  cameraTransform: {fileID: 0}
+  totalDistance: 0
+  sampleCount: 0
+  averageDistance: 0
 --- !u!65 &2090511487
 BoxCollider:
   m_ObjectHideFlags: 0
