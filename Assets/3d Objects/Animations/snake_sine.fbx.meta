@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 3ed3ba2c6cc5fc945a46b386e7d4d588
+guid: c1b318054ca5d7e4b8f65e94d22a39a1
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 1eae707f441056549b531c2746664ca9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -56,6 +61,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
