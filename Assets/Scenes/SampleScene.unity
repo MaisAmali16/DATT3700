@@ -957,7 +957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 376.02487, y: 135.60092}
+  m_AnchoredPosition: {x: 376.02487, y: 129}
   m_SizeDelta: {x: 750.49994, y: 477.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180753178
@@ -4620,7 +4620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 504.02487, y: 233.60092}
+  m_AnchoredPosition: {x: 517, y: 231}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715465285
@@ -5452,8 +5452,8 @@ Transform:
   m_GameObject: {fileID: 934160394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -376.02487, y: -227.60092, z: -214.85593}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -340.99, y: -219.49, z: -254.1}
+  m_LocalScale: {x: 0.90684706, y: 1.1827, z: 1.1827}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228379669}
@@ -5966,7 +5966,7 @@ Canvas:
   m_GameObject: {fileID: 1098659832}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5993,7 +5993,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 934160395}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1919091304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6502,7 +6502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3056603, g: 0.29470268, b: 0.29470268, a: 1}
+  m_Color: {r: 0.38364768, g: 0.3631382, b: 0.3631382, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9189,7 +9189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376.02487, y: 41.60092}
+  m_AnchoredPosition: {x: 376.02487, y: 28}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706441149
@@ -10238,7 +10238,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -8.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1098659836}
   m_Father: {fileID: 93413874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1919091305
@@ -11933,5 +11934,4 @@ SceneRoots:
   - {fileID: 864687748}
   - {fileID: 1927182009}
   - {fileID: 456931833}
-  - {fileID: 1098659836}
   - {fileID: 1816421128}
