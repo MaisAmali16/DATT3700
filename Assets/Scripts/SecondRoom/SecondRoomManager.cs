@@ -97,8 +97,8 @@ public class Room2Manager : MonoBehaviour
         float spawnChance = 0.3f;
         switch(playerProfile)
         {
-            case "Paranoid": spawnChance = 0.48f; break; //0.2
-            case "Cautious": spawnChance = 0.48f; break; //0.37
+            case "Paranoid": spawnChance = 0.2f; break; //0.2
+            case "Cautious": spawnChance = 0.37f; break; //0.37
             case "Bold": spawnChance = 0.48f; break;
         }
 
@@ -132,7 +132,13 @@ public class Room2Manager : MonoBehaviour
         {
             float x = Random.Range(b.min.x, b.max.x);
             float z = Random.Range(b.min.z, b.max.z);
-            float y = (b.min.y) + 1f; // ground level
+            float y;
+            if (strongestZone.zoneName == "Zone4"){
+                y = (b.min.y) + 4f;
+            }else{
+                 y = (b.min.y); // ground level
+            }
+           
             spawnPos = new Vector3(x, y, z);
             attempts++;
         }
@@ -146,10 +152,12 @@ public class Room2Manager : MonoBehaviour
     {
         if (activeCube == null || playerCamera == null) return;
 
-        float moveDistance = 10f; // how far the cube moves closer
+        float moveDistance = 4f; // how far the cube moves closer
 
         // direction from cube to player
         Vector3 directionToPlayer = (playerCamera.position - activeCube.transform.position).normalized;
+        directionToPlayer.y = 0f;
+        directionToPlayer.Normalize();
 
         // move the cube
         activeCube.transform.position += directionToPlayer * moveDistance;
