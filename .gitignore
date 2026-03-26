@@ -100,3 +100,4 @@ InitTestScene*.unity*
 Assets/XR/Settings/OpenXR Package Settings.asset
 *.asset
 *.slnx
+*.asset
