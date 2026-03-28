@@ -70,35 +70,50 @@ using System.Collections;
 public class BreakerButton : MonoBehaviour
 {
     public bool isCorrectButton = false;
-
     public BreakerPuzzleManager puzzleManager;
-
     public Renderer ledRenderer;
     public Material ledGreen;
     public Material ledRed;
-
     private Material ledDefault;
+
+    // --- NEW AUDIO VARIABLES ---
+    [Header("Audio Settings")]
+    public AudioSource buttonAudioSource;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+    // ---------------------------
 
     void Start()
     {
-        // Store original material (LED off state)
         ledDefault = ledRenderer.material;
     }
 
-    void OnMouseDown()
+    void OnMouseDown() // Note: If you switch to your VR logic later, put these play lines inside OnButtonPressed instead!
     {
         if (isCorrectButton)
         {
             Debug.Log("CORRECT BUTTON PRESSED");
-            StartCoroutine(FlashLED(ledGreen));
+            
+            // --- PLAY CORRECT SOUND ---
+            if (buttonAudioSource != null && correctSound != null)
+            {
+                buttonAudioSource.PlayOneShot(correctSound);
+            }
 
+            StartCoroutine(FlashLED(ledGreen));
             puzzleManager.RegisterCorrectPress();
         }
         else
         {
             Debug.Log("WRONG BUTTON PRESSED: " + gameObject.name);
-            StartCoroutine(FlashLED(ledRed));
+            
+            // --- PLAY WRONG SOUND ---
+            if (buttonAudioSource != null && wrongSound != null)
+            {
+                buttonAudioSource.PlayOneShot(wrongSound);
+            }
 
+            StartCoroutine(FlashLED(ledRed));
             puzzleManager.RegisterWrongPress();
         }
     }
@@ -106,10 +121,8 @@ public class BreakerButton : MonoBehaviour
     IEnumerator FlashLED(Material flashMaterial)
     {
         ledRenderer.material = flashMaterial;
-
-        yield return new WaitForSeconds(1f); // stays for 1 second
-
-        ledRenderer.material = ledDefault; // turn OFF again
+        yield return new WaitForSeconds(1f);
+        ledRenderer.material = ledDefault; 
     }
 }
 
