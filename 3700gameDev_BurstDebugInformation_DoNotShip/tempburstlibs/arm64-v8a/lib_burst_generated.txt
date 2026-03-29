@@ -10,7 +10,6 @@ Library: C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburst
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Library\Burst
 --output=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -129,7 +128,6 @@ Library: C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburst
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Library\Burst
 --output=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -148,7 +146,6 @@ Library: C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburst
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Library\Burst
 --output=C:\Users\Elizaveta\Documents\GitHub\DATT3700\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
