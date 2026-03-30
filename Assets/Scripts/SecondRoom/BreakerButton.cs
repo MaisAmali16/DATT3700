@@ -79,6 +79,12 @@ public class BreakerButton : MonoBehaviour
 
     private Material ledDefault;
 
+    // --- AUDIO VARIABLES ---
+    [Header("Audio Settings")]
+    public AudioSource buttonAudioSource;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+
     void Start()
     {
         // Store original material (LED off state)
@@ -90,6 +96,13 @@ public class BreakerButton : MonoBehaviour
         if (isCorrectButton)
         {
             Debug.Log("CORRECT BUTTON PRESSED");
+
+            // Play the correct sound
+            if (buttonAudioSource != null && correctSound != null)
+            {
+                buttonAudioSource.PlayOneShot(correctSound);
+            }
+
             StartCoroutine(FlashLED(ledGreen));
 
             puzzleManager.RegisterCorrectPress();
@@ -97,6 +110,13 @@ public class BreakerButton : MonoBehaviour
         else
         {
             Debug.Log("WRONG BUTTON PRESSED: " + gameObject.name);
+
+            // Play the wrong sound
+            if (buttonAudioSource != null && wrongSound != null)
+            {
+                buttonAudioSource.PlayOneShot(wrongSound);
+            }
+
             StartCoroutine(FlashLED(ledRed));
 
             puzzleManager.RegisterWrongPress();
