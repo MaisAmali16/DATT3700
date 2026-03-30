@@ -6,6 +6,8 @@ public class BreakerPuzzleManager : MonoBehaviour
     private int currentProgress = 0;
 
     public RoomLightController lightController;
+    //added new bool
+    public bool IsPuzzleSolved { get; private set; } = false;
 
     public void RegisterCorrectPress()
     {
@@ -16,6 +18,7 @@ public class BreakerPuzzleManager : MonoBehaviour
         {
             Debug.Log("PUZZLE COMPLETE!");
             lightController.TurnOnLight();
+            IsPuzzleSolved = true;
         }
     }
 
@@ -23,5 +26,7 @@ public class BreakerPuzzleManager : MonoBehaviour
     {
         Debug.Log("Wrong button pressed — sequence reset.");
         currentProgress = 0;
+
+        IsPuzzleSolved = false;
     }
 }
