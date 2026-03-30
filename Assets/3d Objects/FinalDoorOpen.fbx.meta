@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: df120109ca9b1e1428bf94d329678a9c
+guid: 49dbccf04df5440499f54cac2e01a5ec
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dorr_Wood
-    second: {fileID: 2100000, guid: ca5076e00ea659141aeab1abd6554b4d, type: 2}
+    second: {fileID: 2100000, guid: edd30e8fb177b4450875b005c1a800da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mettal
+    second: {fileID: 2100000, guid: 050972abcf61249aebf6b39c2a6a7ca7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -61,6 +66,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

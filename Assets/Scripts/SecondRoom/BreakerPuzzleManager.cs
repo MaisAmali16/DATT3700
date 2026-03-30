@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BreakerPuzzleManager : MonoBehaviour
 {
+    [SerializeField] private Animator mydoor = null;
     public int totalCorrectButtons = 3; // number of panels / correct buttons
     private int currentProgress = 0;
 
@@ -16,6 +17,7 @@ public class BreakerPuzzleManager : MonoBehaviour
         {
             Debug.Log("PUZZLE COMPLETE!");
             lightController.TurnOnLight();
+            mydoor.Play("FinalDoor", 0, 0.0f);
         }
     }
 
